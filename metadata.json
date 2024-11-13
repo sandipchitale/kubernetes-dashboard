@@ -1,0 +1,13 @@
+{
+  "icon": "kubernetes-dashboard.svg",
+  "vm": {
+    "composefile": "docker-compose.yaml"
+  },
+  "ui": {
+    "dashboard-tab": {
+      "title": "kubernetes-dashboard",
+      "src": "index.html",
+      "root": "ui"
+    }
+  }
+}
