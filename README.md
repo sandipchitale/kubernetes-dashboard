@@ -103,3 +103,8 @@ docker extension rm sandipchitale/kubernetes-dashboard:latest
 - To publish your extension in the Marketplace visit https://www.docker.com/products/extensions/submissions/.
 - To report issues and feedback visit https://github.com/docker/extensions-sdk/issues.
 - To look for other ideas of new extensions, or propose new ideas of extensions you would like to see, visit https://github.com/docker/extension-ideas/discussions.
+
+
+# NOTE
+
+make && docker extension update sandipchitale/kubernetes-dashboard:latest -f && docker extension dev debug sandipchitale/kubernetes-dashboard
