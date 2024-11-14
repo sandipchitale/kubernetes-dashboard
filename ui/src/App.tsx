@@ -7,6 +7,7 @@ import {
     primeCluster,
     getToken,
     portForward,
+    deprimeCluster,
 } from "./helper/kubernetes";
 
 import {
@@ -118,6 +119,16 @@ export function App() {
                             }}
                         >
                             Uninstall kubernetes dashboard
+                        </Button>
+
+                        <Button
+                            variant="contained"
+                            onClick={async () => {
+                                const result = await deprimeCluster(ddClient);
+                                setResponse(result);
+                            }}
+                        >
+                            Deprime cluster
                         </Button>
 
                     </Stack>

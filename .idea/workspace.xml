@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6dddbd27-8e01-4e4d-ad25-1242f8761e6c" name="Changes" comment="Get token.">
-      <change afterPath="$PROJECT_DIR$/ui/public/kubectl/kubernetes-dashboard-cluster-role-binding.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/public/kubectl/kubernetes-dashboard-secret.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/public/kubectl/kubernetes-dashboard-service-account.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/src/helper/kubernetes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/helper/kubernetes.ts" afterDir="false" />
@@ -106,6 +103,7 @@
       <workItem from="1731570887335" duration="1009000" />
       <workItem from="1731576018380" duration="1630000" />
       <workItem from="1731579693595" duration="913000" />
+      <workItem from="1731607636752" duration="869000" />
     </task>
     <task id="LOCAL-00001" summary="Install, List, Uninstall, Port forward, Load KD.">
       <option name="closed" value="true" />

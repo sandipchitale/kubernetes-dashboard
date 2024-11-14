@@ -23,7 +23,7 @@ export const checkK8sConnection = async (ddClient: v1.DockerDesktopClient) => {
 };
 
 export const primeCluster = async (ddClient: v1.DockerDesktopClient) => {
-    ddClient.desktopUI.toast.success('Priming cluster for Kubernetes Dashboard. Creating namespace and service account, CRB, and secret');
+    ddClient.desktopUI.toast.success('Priming cluster for Kubernetes Dashboard. Creating namespace, service account, CRB, and secret');
     const output = await ddClient.extension.host?.cli.exec("kubectl", [
         "apply",
         "-f",
@@ -79,3 +79,20 @@ export const portForward = async (ddClient: v1.DockerDesktopClient) => {
     });
 };
 
+
+export const deprimeCluster = async (ddClient: v1.DockerDesktopClient) => {
+    ddClient.desktopUI.toast.success('Depriming cluster for Kubernetes Dashboard. Deleting service account, CRB, and secret');
+    const output = await ddClient.extension.host?.cli.exec("kubectl", [
+        "delete",
+        "-f",
+        "./extensions/sandipchitale_kubernetes-dashboard//ui/ui/kubectl"
+    ])
+    console.log(output);
+    if (output?.stderr) {
+        ddClient.desktopUI.toast.error('Priming cluster failed');
+        console.log(output.stderr);
+        return 'Priming cluster failed';
+    }
+    ddClient.desktopUI.toast.success('Deletd service account, CRB, and secret successfully.');
+    return output?.stdout;
+};
