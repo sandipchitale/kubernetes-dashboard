@@ -16,6 +16,7 @@ export const listHelmReleases = async (ddClient: v1.DockerDesktopClient) => {
 };
 
 export const installKubernetesDashboardChart = async (ddClient: v1.DockerDesktopClient) => {
+  ddClient.desktopUI.toast.success('Installing Kubernetes Dashboard Helm Chart');
   const output = await ddClient.extension.host?.cli.exec("helm", [
     "install",
     "-n",
@@ -28,11 +29,12 @@ export const installKubernetesDashboardChart = async (ddClient: v1.DockerDesktop
     console.log(output.stderr);
     return output.stderr;
   }
-
+  ddClient.desktopUI.toast.success('Kubernetes Dashboard Helm Chart installed');
   return output?.stdout;
 };
 
 export const uninstallKubernetesDashboardChart = async (ddClient: v1.DockerDesktopClient) => {
+  ddClient.desktopUI.toast.success('Uninstalling Kubernetes Dashboard');
   const output = await ddClient.extension.host?.cli.exec("helm", [
     "uninstall",
     "-n",
@@ -44,7 +46,7 @@ export const uninstallKubernetesDashboardChart = async (ddClient: v1.DockerDeskt
     console.log(output.stderr);
     return output.stderr;
   }
-
+  ddClient.desktopUI.toast.success('Kubernetes Dashboard uninstalled');
   return output?.stdout;
 };
 

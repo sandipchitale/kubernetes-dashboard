@@ -4,24 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dddbd27-8e01-4e4d-ad25-1242f8761e6c" name="Changes" comment="Works!">
-      <change afterPath="$PROJECT_DIR$/binaries/linux/helm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/public/chart/kubernetes-dashboard.tgz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/helper/helm.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/helper/kubernetes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/src/react-app-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/tsconfig.json" afterDir="false" />
+    <list default="true" id="6dddbd27-8e01-4e4d-ad25-1242f8761e6c" name="Changes" comment="Install, List, Uninstall, Port forward, Load KD.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/helper/helm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/helper/helm.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/helper/kubernetes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/helper/kubernetes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,22 +44,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/sandipchitale/professional/docker/extensions/kubernetes-dashboard/chart",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/home/sandipchitale/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sandipchitale/professional/docker/extensions/kubernetes-dashboard/chart&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/sandipchitale/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/chart" />
@@ -112,11 +98,25 @@
       <workItem from="1731518983503" duration="43000" />
       <workItem from="1731519454304" duration="26000" />
       <workItem from="1731546190614" duration="437000" />
-      <workItem from="1731557022758" duration="10457000" />
+      <workItem from="1731557022758" duration="10740000" />
+      <workItem from="1731570887335" duration="720000" />
     </task>
+    <task id="LOCAL-00001" summary="Install, List, Uninstall, Port forward, Load KD.">
+      <option name="closed" value="true" />
+      <created>1731569233027</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731569233027</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Install, List, Uninstall, Port forward, Load KD." />
+    <option name="LAST_COMMIT_MESSAGE" value="Install, List, Uninstall, Port forward, Load KD." />
   </component>
 </project>
