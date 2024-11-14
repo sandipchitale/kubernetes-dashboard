@@ -4,32 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dddbd27-8e01-4e4d-ad25-1242f8761e6c" name="Changes" comment="">
+    <list default="true" id="6dddbd27-8e01-4e4d-ad25-1242f8761e6c" name="Changes" comment="Works!">
+      <change afterPath="$PROJECT_DIR$/binaries/linux/helm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/public/chart/kubernetes-dashboard.tgz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/helper/helm.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/helper/kubernetes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/src/react-app-env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/.browserslistrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/main.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/vite-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/tsconfig.node.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sandipchitale&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sandipchitale/kubernetes-dashboard.git&quot;,
+    &quot;accountId&quot;: &quot;29c145ad-06e5-4157-8865-9b21ff865142&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -45,7 +63,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/sandipchitale/professional/docker/extensions/kubernetes-dashboard/backend",
+    "last_opened_file_path": "/home/sandipchitale/professional/docker/extensions/kubernetes-dashboard/chart",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,8 +76,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/chart" />
       <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ui/public" />
+      <recent name="$PROJECT_DIR$/ui" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -85,6 +108,11 @@
       <workItem from="1731467921917" duration="2835000" />
       <workItem from="1731470837185" duration="554000" />
       <workItem from="1731471811372" duration="3057000" />
+      <workItem from="1731518720059" duration="251000" />
+      <workItem from="1731518983503" duration="43000" />
+      <workItem from="1731519454304" duration="26000" />
+      <workItem from="1731546190614" duration="437000" />
+      <workItem from="1731557022758" duration="10457000" />
     </task>
     <servers />
   </component>

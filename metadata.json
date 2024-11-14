@@ -9,5 +9,29 @@
       "src": "index.html",
       "root": "ui"
     }
+  },
+  "host": {
+    "binaries": [
+      {
+        "darwin": [
+          {
+            "path": "/darwin/kubectl"
+          }
+        ],
+        "windows": [
+          {
+            "path": "/windows/kubectl.exe"
+          }
+        ],
+        "linux": [
+          {
+            "path": "/linux/kubectl"
+          },
+          {
+            "path": "/linux/helm"
+          }
+        ]
+      }
+    ]
   }
 }

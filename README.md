@@ -107,4 +107,7 @@ docker extension rm sandipchitale/kubernetes-dashboard:latest
 
 # NOTE
 
+make && docker extension install sandipchitale/kubernetes-dashboard:latest -f
+make && docker extension uninstall sandipchitale/kubernetes-dashboard:latest -f
+make && docker extension install sandipchitale/kubernetes-dashboard:latest -f && docker extension dev debug sandipchitale/kubernetes-dashboard
 make && docker extension update sandipchitale/kubernetes-dashboard:latest -f && docker extension dev debug sandipchitale/kubernetes-dashboard
