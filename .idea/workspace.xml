@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dddbd27-8e01-4e4d-ad25-1242f8761e6c" name="Changes" comment="Install, List, Uninstall, Port forward, Load KD.">
+    <list default="true" id="6dddbd27-8e01-4e4d-ad25-1242f8761e6c" name="Changes" comment="Toasts.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/helper/helm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/helper/helm.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/src/helper/kubernetes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/helper/kubernetes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +99,8 @@
       <workItem from="1731519454304" duration="26000" />
       <workItem from="1731546190614" duration="437000" />
       <workItem from="1731557022758" duration="10740000" />
-      <workItem from="1731570887335" duration="720000" />
+      <workItem from="1731570887335" duration="1009000" />
+      <workItem from="1731576018380" duration="705000" />
     </task>
     <task id="LOCAL-00001" summary="Install, List, Uninstall, Port forward, Load KD.">
       <option name="closed" value="true" />
@@ -109,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731569233027</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Toasts.">
+      <option name="closed" value="true" />
+      <created>1731571746517</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731571746517</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +126,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Install, List, Uninstall, Port forward, Load KD." />
-    <option name="LAST_COMMIT_MESSAGE" value="Install, List, Uninstall, Port forward, Load KD." />
+    <MESSAGE value="Toasts." />
+    <option name="LAST_COMMIT_MESSAGE" value="Toasts." />
   </component>
 </project>

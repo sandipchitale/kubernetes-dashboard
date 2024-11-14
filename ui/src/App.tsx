@@ -4,6 +4,7 @@ import {createDockerDesktopClient} from "@docker/extension-api-client";
 import {Grid, Stack, TextField, Typography} from "@mui/material";
 import {
     checkK8sConnection,
+    getToken,
     portForward,
 } from "./helper/kubernetes";
 
@@ -82,11 +83,23 @@ export function App() {
                         <Button
                             variant="contained"
                             onClick={async () => {
+                                const result = await getToken(ddClient);
+                                setResponse(result as string);
+                            }}
+                        >
+                            Get Token
+                        </Button>
+
+                        <Button
+                            variant="contained"
+                            onClick={async () => {
                                 const result = await loadKubernetesDashboard();
                             }}
                         >
                             Load Kubernetes Dashboard
                         </Button>
+
+
 
                         <Button
                             variant="contained"
