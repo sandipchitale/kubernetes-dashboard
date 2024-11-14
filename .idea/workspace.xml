@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dddbd27-8e01-4e4d-ad25-1242f8761e6c" name="Changes" comment="Toasts.">
+    <list default="true" id="6dddbd27-8e01-4e4d-ad25-1242f8761e6c" name="Changes" comment="Get token.">
+      <change afterPath="$PROJECT_DIR$/ui/public/kubectl/kubernetes-dashboard-cluster-role-binding.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/public/kubectl/kubernetes-dashboard-secret.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/public/kubectl/kubernetes-dashboard-service-account.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/src/helper/kubernetes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/helper/kubernetes.ts" afterDir="false" />
@@ -49,7 +52,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sandipchitale/professional/docker/extensions/kubernetes-dashboard/chart&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/sandipchitale/professional/docker/extensions/kubernetes-dashboard/ui/public&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -62,6 +65,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ui/public" />
       <recent name="$PROJECT_DIR$/chart" />
       <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$" />
@@ -100,7 +104,8 @@
       <workItem from="1731546190614" duration="437000" />
       <workItem from="1731557022758" duration="10740000" />
       <workItem from="1731570887335" duration="1009000" />
-      <workItem from="1731576018380" duration="705000" />
+      <workItem from="1731576018380" duration="1630000" />
+      <workItem from="1731579693595" duration="913000" />
     </task>
     <task id="LOCAL-00001" summary="Install, List, Uninstall, Port forward, Load KD.">
       <option name="closed" value="true" />
@@ -118,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731571746517</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Get token.">
+      <option name="closed" value="true" />
+      <created>1731577045286</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731577045286</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +140,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Install, List, Uninstall, Port forward, Load KD." />
     <MESSAGE value="Toasts." />
-    <option name="LAST_COMMIT_MESSAGE" value="Toasts." />
+    <MESSAGE value="Get token." />
+    <option name="LAST_COMMIT_MESSAGE" value="Get token." />
   </component>
 </project>

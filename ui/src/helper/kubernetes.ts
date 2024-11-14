@@ -22,6 +22,23 @@ export const checkK8sConnection = async (ddClient: v1.DockerDesktopClient) => {
     }
 };
 
+export const primeCluster = async (ddClient: v1.DockerDesktopClient) => {
+    ddClient.desktopUI.toast.success('Priming cluster for Kubernetes Dashboard. Creating namespace and service account, CRB, and secret');
+    const output = await ddClient.extension.host?.cli.exec("kubectl", [
+        "apply",
+        "-f",
+        "./extensions/sandipchitale_kubernetes-dashboard//ui/ui/kubectl"
+    ])
+    console.log(output);
+    if (output?.stderr) {
+        ddClient.desktopUI.toast.error('Priming cluster failed');
+        console.log(output.stderr);
+        return 'Priming cluster failed';
+    }
+    ddClient.desktopUI.toast.success('Created namespace, service account, CRB, and secret successfully.');
+    return output?.stdout;
+};
+
 export const getToken = async (ddClient: v1.DockerDesktopClient) => {
     ddClient.desktopUI.toast.success('Getting token');
     const output = await ddClient.extension.host?.cli.exec("kubectl", [
@@ -35,9 +52,9 @@ export const getToken = async (ddClient: v1.DockerDesktopClient) => {
     ])
     console.log(output);
     if (output?.stderr) {
-        ddClient.desktopUI.toast.error('Getting token failed');
+        ddClient.desktopUI.toast.error('Getting token failed.');
         console.log(output.stderr);
-        return 'Connection failed';
+        return 'Getting token failed.';
     }
     ddClient.desktopUI.toast.success('Got token successfully. Copy the token and paste it in the login screen after loading Kubernetes Dashboard.');
     return window.atob(output?.stdout as string);

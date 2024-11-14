@@ -4,6 +4,7 @@ import {createDockerDesktopClient} from "@docker/extension-api-client";
 import {Grid, Stack, TextField, Typography} from "@mui/material";
 import {
     checkK8sConnection,
+    primeCluster,
     getToken,
     portForward,
 } from "./helper/kubernetes";
@@ -48,6 +49,16 @@ export function App() {
                             }}
                         >
                             Check Kubernetes connection
+                        </Button>
+
+                        <Button
+                            variant="contained"
+                            onClick={async () => {
+                                const result = await primeCluster(ddClient);
+                                setResponse(result);
+                            }}
+                        >
+                            Prime cluster
                         </Button>
 
                         <Button
@@ -98,8 +109,6 @@ export function App() {
                         >
                             Load Kubernetes Dashboard
                         </Button>
-
-
 
                         <Button
                             variant="contained"
