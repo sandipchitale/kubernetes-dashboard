@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dddbd27-8e01-4e4d-ad25-1242f8761e6c" name="Changes" comment="Fix paths for windows.">
+    <list default="true" id="6dddbd27-8e01-4e4d-ad25-1242f8761e6c" name="Changes" comment="Cleanup. Try/catch.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/helper/helm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/helper/helm.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/helper/kubernetes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/helper/kubernetes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +107,8 @@
       <workItem from="1731607636752" duration="869000" />
       <workItem from="1731631073043" duration="9485000" />
       <workItem from="1731645957136" duration="3363000" />
-      <workItem from="1731654277074" duration="1518000" />
+      <workItem from="1731654277074" duration="1733000" />
+      <workItem from="1731693144712" duration="208000" />
     </task>
     <task id="LOCAL-00001" summary="Install, List, Uninstall, Port forward, Load KD.">
       <option name="closed" value="true" />
@@ -190,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731647784435</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Cleanup. Try/catch.">
+      <option name="closed" value="true" />
+      <created>1731655917623</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731655917623</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +224,7 @@
     <MESSAGE value="Version tag." />
     <MESSAGE value="Map helm path in metadata.json." />
     <MESSAGE value="Fix paths for windows." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix paths for windows." />
+    <MESSAGE value="Cleanup. Try/catch." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup. Try/catch." />
   </component>
 </project>

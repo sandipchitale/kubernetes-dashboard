@@ -28,13 +28,13 @@ You can use `docker` to build, install and push your extension. Also, we provide
 To build the extension, use `make build-extension` **or**:
 
 ```shell
-  docker buildx build -t sandipchitale/kubernetes-dashboard:0.0.4 . --load
+  docker buildx build -t sandipchitale/kubernetes-dashboard:0.0.5 . --load
 ```
 
 To install the extension, use `make install-extension` **or**:
 
 ```shell
-  docker extension install sandipchitale/kubernetes-dashboard:0.0.4
+  docker extension install sandipchitale/kubernetes-dashboard:0.0.5
 ```
 
 > If you want to automate this command, use the `-f` or `--force` flag to accept the warning message.
@@ -57,19 +57,19 @@ This starts a development server that listens on port `3000`.
 You can now tell Docker Desktop to use this as the frontend source. In another terminal run:
 
 ```shell
-  docker extension dev ui-source sandipchitale/kubernetes-dashboard:0.0.4 http://localhost:3000
+  docker extension dev ui-source sandipchitale/kubernetes-dashboard:0.0.5 http://localhost:3000
 ```
 
 In order to open the Chrome Dev Tools for your extension when you click on the extension tab, run:
 
 ```shell
-  docker extension dev debug sandipchitale/kubernetes-dashboard:0.0.4
+  docker extension dev debug sandipchitale/kubernetes-dashboard:0.0.5
 ```
 
 Each subsequent click on the extension tab will also open Chrome Dev Tools. To stop this behaviour, run:
 
 ```shell
-  docker extension dev reset sandipchitale/kubernetes-dashboard:0.0.4
+  docker extension dev reset sandipchitale/kubernetes-dashboard:0.0.5
 ```
 
 ### Backend development (optional)
@@ -82,7 +82,7 @@ Whenever you make changes in the [backend](./backend) source code, you will need
 Use the `docker extension update` command to remove and re-install the extension automatically:
 
 ```shell
-docker extension update sandipchitale/kubernetes-dashboard:0.0.4
+docker extension update sandipchitale/kubernetes-dashboard:0.0.5
 ```
 
 > If you want to automate this command, use the `-f` or `--force` flag to accept the warning message.
@@ -94,7 +94,7 @@ docker extension update sandipchitale/kubernetes-dashboard:0.0.4
 To remove the extension:
 
 ```shell
-docker extension rm sandipchitale/kubernetes-dashboard:0.0.4
+docker extension rm sandipchitale/kubernetes-dashboard:0.0.5
 ```
 
 ## What's next?
@@ -109,9 +109,9 @@ docker extension rm sandipchitale/kubernetes-dashboard:0.0.4
 
 ## Without debug mode
 
-make && docker extension install sandipchitale/kubernetes-dashboard:0.0.4 -f
-make && docker extension update sandipchitale/kubernetes-dashboard:0.0.4 -f
+make && docker extension install sandipchitale/kubernetes-dashboard:0.0.5 -f
+make && docker extension update sandipchitale/kubernetes-dashboard:0.0.5 -f
 
 ## With debug mode
-make && docker extension install sandipchitale/kubernetes-dashboard:0.0.4 -f && docker extension dev debug sandipchitale/kubernetes-dashboard
-make && docker extension update sandipchitale/kubernetes-dashboard:0.0.4 -f && docker extension dev debug sandipchitale/kubernetes-dashboard
+make && docker extension install sandipchitale/kubernetes-dashboard:0.0.5 -f && docker extension dev debug sandipchitale/kubernetes-dashboard
+make && docker extension update sandipchitale/kubernetes-dashboard:0.0.5 -f && docker extension dev debug sandipchitale/kubernetes-dashboard

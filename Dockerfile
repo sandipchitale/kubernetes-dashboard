@@ -66,7 +66,7 @@ RUN wget https://get.helm.sh/helm-v3.16.3-windows-amd64.zip && unzip helm-v3.16.
 RUN chmod +x ./windows-amd64/helm.exe
 RUN mkdir -p /windows
 RUN mv ./windows-amd64/helm.exe /windows/helm.exe
-RUN rm -rf helm-v3.16.3-windows-amd64.tar.gz ./windows-amd64
+RUN rm -rf helm-v3.16.3-windows-amd64.zip ./windows-amd64
 
 COPY docker-compose.yaml .
 COPY metadata.json .
