@@ -23,11 +23,15 @@ export const checkK8sConnection = async (ddClient: v1.DockerDesktopClient) => {
 };
 
 export const primeCluster = async (ddClient: v1.DockerDesktopClient) => {
+    const os = await ddClient.host.platform;
+    const kubectlDir = (os === 'win32' ?
+        ".\\extensions\\sandipchitale_kubernetes-dashboard\\ui\\ui\\kubectl" :
+        "./extensions/sandipchitale_kubernetes-dashboard/ui/ui/kubectl");
     ddClient.desktopUI.toast.success('Priming cluster for Kubernetes Dashboard. Creating namespace, service account, CRB, and secret');
     const output = await ddClient.extension.host?.cli.exec("kubectl", [
         "apply",
         "-f",
-        "./extensions/sandipchitale_kubernetes-dashboard//ui/ui/kubectl"
+        kubectlDir,
     ])
     console.log(output);
     if (output?.stderr) {
@@ -81,11 +85,15 @@ export const portForward = async (ddClient: v1.DockerDesktopClient) => {
 
 
 export const deprimeCluster = async (ddClient: v1.DockerDesktopClient) => {
+    const os = await ddClient.host.platform;
+    const kubectlDir = (os === 'win32' ?
+        ".\\extensions\\sandipchitale_kubernetes-dashboard\\ui\\ui\\kubectl" :
+        "./extensions/sandipchitale_kubernetes-dashboard/ui/ui/kubectl");
     ddClient.desktopUI.toast.success('Depriming cluster for Kubernetes Dashboard. Deleting service account, CRB, and secret');
     const output = await ddClient.extension.host?.cli.exec("kubectl", [
         "delete",
         "-f",
-        "./extensions/sandipchitale_kubernetes-dashboard//ui/ui/kubectl"
+        kubectlDir,
     ])
     console.log(output);
     if (output?.stderr) {
