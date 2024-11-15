@@ -56,7 +56,7 @@ export const getToken = async (ddClient: v1.DockerDesktopClient) => {
         console.log(output.stderr);
         return 'Getting token failed.';
     }
-    ddClient.desktopUI.toast.success('Got token successfully. Copy the token and paste it in the login screen after loading Kubernetes Dashboard.');
+    ddClient.desktopUI.toast.success('Got token successfully and copied to clipboard. Load Kubernetes Dashboard and paste it in Bearer token * box.');
     return window.atob(output?.stdout as string);
 };
 

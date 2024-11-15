@@ -36,22 +36,38 @@ export function App() {
         <>
             <Typography variant="h3">Kuberntes Dashboard Extension</Typography>
             <Typography variant="body1" color="text.secondary" sx={{mt: 2}}>
-                Install Kubernetes Dashboard Helm chart, forward port, load Kubernetes Dashboard, uninstall Kubernetes
-                Dashboard Helm chart.
+                Prime cluster for Kubernetes Dashboard.
+                Install Kubernetes Dashboard Helm chart.
+                Forward port.
+                Get token.
+                Load Kubernetes Dashboard.
+                Optionally, uninstall Kubernetes Dashboard Helm release.
             </Typography>
             <Grid container spacing={2}>
                 <Grid item>
                     <Stack direction="row" alignItems="start" spacing={2} sx={{mt: 4}}>
                         <Button
+                            color="info"
                             variant="contained"
                             onClick={async () => {
                                 const result = await checkK8sConnection(ddClient);
                                 setResponse(result);
                             }}
                         >
-                            Check Kubernetes connection
+                            Check connection to Cluster
                         </Button>
-
+                        <Button
+                            color="info"
+                            variant="contained"
+                            onClick={async () => {
+                                const result = await listHelmReleases(ddClient);
+                                setResponse(result as string);
+                            }}
+                        >
+                            List Kubernetes Dashboard Helm Release
+                        </Button>
+                    </Stack>
+                    <Stack direction="row" alignItems="start" spacing={2} sx={{mt: 4}}>
                         <Button
                             variant="contained"
                             onClick={async () => {
@@ -59,19 +75,8 @@ export function App() {
                                 setResponse(result);
                             }}
                         >
-                            Prime cluster
+                            Step 1: Prime cluster
                         </Button>
-
-                        <Button
-                            variant="contained"
-                            onClick={async () => {
-                                const result = await listHelmReleases(ddClient);
-                                setResponse(result as string);
-                            }}
-                        >
-                            List Helm Releases
-                        </Button>
-
                         <Button
                             variant="contained"
                             onClick={async () => {
@@ -79,7 +84,7 @@ export function App() {
                                 setResponse(result as string);
                             }}
                         >
-                            Install kubernetes dashboard chart
+                            Step 2: Install kubernetes dashboard chart
                         </Button>
 
                         <Button
@@ -89,7 +94,7 @@ export function App() {
                                 setResponse('Port Forwarding started');
                             }}
                         >
-                            Port Forward
+                            Step 3: Port Forward
                         </Button>
 
                         <Button
@@ -97,9 +102,10 @@ export function App() {
                             onClick={async () => {
                                 const result = await getToken(ddClient);
                                 setResponse(result as string);
+                                navigator.clipboard.writeText(result);
                             }}
                         >
-                            Get Token
+                            Step 4: Get Token
                         </Button>
 
                         <Button
@@ -108,41 +114,44 @@ export function App() {
                                 const result = await loadKubernetesDashboard();
                             }}
                         >
-                            Load Kubernetes Dashboard
+                            Step 5: Load Kubernetes Dashboard
                         </Button>
-
-                        <Button
-                            variant="contained"
-                            onClick={async () => {
-                                const result = await uninstallKubernetesDashboardChart(ddClient);
-                                setResponse(result as string);
-                            }}
-                        >
-                            Uninstall kubernetes dashboard
-                        </Button>
-
-                        <Button
-                            variant="contained"
-                            onClick={async () => {
-                                const result = await deprimeCluster(ddClient);
-                                setResponse(result);
-                            }}
-                        >
-                            Deprime cluster
-                        </Button>
-
                     </Stack>
                 </Grid>
                 <Grid item>
                     <TextField
-                        label="Output"
-                        sx={{width: '90vw'}}
+                        sx={{width: '94vw'}}
                         disabled
                         multiline
                         variant="outlined"
                         minRows={20}
                         value={response ?? ""}
                     />
+                </Grid>
+                <Grid item>
+                    <Stack direction="row" alignItems="start" spacing={2} sx={{mt: 4}}>
+                        <Button
+                            color="error"
+                            variant="contained"
+                            onClick={async () => {
+                                const result = await uninstallKubernetesDashboardChart(ddClient);
+                                setResponse(result as string);
+                            }}
+                        >
+                            Cleanup Step 1: Uninstall Kubernetes Dashboard
+                        </Button>
+
+                        <Button
+                            color="error"
+                            variant="contained"
+                            onClick={async () => {
+                                const result = await deprimeCluster(ddClient);
+                                setResponse(result);
+                            }}
+                        >
+                            Cleanup Step 2: Deprime cluster
+                        </Button>
+                    </Stack>
                 </Grid>
             </Grid>
         </>
