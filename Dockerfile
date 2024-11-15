@@ -47,11 +47,17 @@ RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/s
     && mkdir /windows \
     && chmod +x ./kubectl.exe && mv ./kubectl.exe /windows/
 
+RUN apk add wget
+RUN wget https://get.helm.sh/helm-v3.16.3-linux-amd64.tar.gz && tar -xf helm-v3.16.3-linux-amd64.tar.gz
+RUN chmod +x ./linux-amd64/helm
+RUN mkdir -p /linux
+RUN mv ./linux-amd64/helm /linux/helm
+RUN rm -rf helm-v3.16.3-linux-amd64.tar.gz ./linux-amd64
+
 COPY docker-compose.yaml .
 COPY metadata.json .
 COPY kubernetes-dashboard.svg .
 COPY --from=client-builder /ui/build ui
-COPY --chmod=0755 binaries/linux/helm /linux/
 
 COPY --from=builder /backend /backend
 EXPOSE 3000
