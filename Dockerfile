@@ -37,35 +37,35 @@ RUN apk add curl
 
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl \
     && chmod +x ./kubectl && mv ./kubectl /usr/local/bin/kubectl \
-    && mkdir /linux \
-    && cp /usr/local/bin/kubectl /linux/
+    && mkdir -p /host/linux \
+    && cp /usr/local/bin/kubectl /host/linux/
 
 RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/darwin/amd64/kubectl" \
-    && mkdir /darwin \
-    && chmod +x ./kubectl && mv ./kubectl /darwin/
+    && mkdir -p /host/darwin \
+    && chmod +x ./kubectl && mv ./kubectl /host/darwin/
 
 RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/windows/amd64/kubectl.exe" \
-    && mkdir /windows \
-    && chmod +x ./kubectl.exe && mv ./kubectl.exe /windows/
+    && mkdir -p /host/windows \
+    && chmod +x ./kubectl.exe && mv ./kubectl.exe /host/windows/
 
 RUN apk add wget
 
 RUN wget https://get.helm.sh/helm-v3.16.3-linux-amd64.tar.gz && tar -xf helm-v3.16.3-linux-amd64.tar.gz
 RUN chmod +x ./linux-amd64/helm
-RUN mkdir -p /linux
-RUN mv ./linux-amd64/helm /linux/helm
+RUN mkdir -p /host/linux
+RUN mv ./linux-amd64/helm /host/linux/helm
 RUN rm -rf helm-v3.16.3-linux-amd64.tar.gz ./linux-amd64
 
 RUN wget https://get.helm.sh/helm-v3.16.3-darwin-arm64.tar.gz && tar -xf helm-v3.16.3-darwin-arm64.tar.gz
 RUN chmod +x ./darwin-arm64/helm
-RUN mkdir -p /darwin
-RUN mv ./darwin-arm64/helm /darwin/helm
+RUN mkdir -p /host/darwin
+RUN mv ./darwin-arm64/helm /host/darwin/helm
 RUN rm -rf helm-v3.16.3-darwin-arm64.tar.gz ./darwin-arm64
 
 RUN wget https://get.helm.sh/helm-v3.16.3-windows-amd64.zip && unzip helm-v3.16.3-windows-amd64.zip
 RUN chmod +x ./windows-amd64/helm.exe
-RUN mkdir -p /windows
-RUN mv ./windows-amd64/helm.exe /windows/helm.exe
+RUN mkdir -p /host/windows
+RUN mv ./windows-amd64/helm.exe /host/windows/helm.exe
 RUN rm -rf helm-v3.16.3-windows-amd64.zip ./windows-amd64
 
 COPY docker-compose.yaml .

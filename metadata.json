@@ -15,26 +15,26 @@
       {
         "darwin": [
           {
-            "path": "/darwin/kubectl"
+            "path": "/host/darwin/kubectl"
           },
           {
-            "path": "/darwin/helm"
+            "path": "/host/darwin/helm"
           }
         ],
         "windows": [
           {
-            "path": "/windows/kubectl.exe"
+            "path": "/host/windows/kubectl.exe"
           },
           {
-            "path": "/windows/helm.exe"
+            "path": "/host/windows/helm.exe"
           }
         ],
         "linux": [
           {
-            "path": "/linux/kubectl"
+            "path": "/host/linux/kubectl"
           },
           {
-            "path": "/linux/helm"
+            "path": "/host/linux/helm"
           }
         ]
       }
