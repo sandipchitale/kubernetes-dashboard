@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dddbd27-8e01-4e4d-ad25-1242f8761e6c" name="Changes" comment="Label and steps numbers.">
+    <list default="true" id="6dddbd27-8e01-4e4d-ad25-1242f8761e6c" name="Changes" comment="Version tag.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/metadata.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +105,8 @@
       <workItem from="1731576018380" duration="1630000" />
       <workItem from="1731579693595" duration="913000" />
       <workItem from="1731607636752" duration="869000" />
-      <workItem from="1731631073043" duration="7703000" />
+      <workItem from="1731631073043" duration="9485000" />
+      <workItem from="1731645957136" duration="264000" />
     </task>
     <task id="LOCAL-00001" summary="Install, List, Uninstall, Port forward, Load KD.">
       <option name="closed" value="true" />
@@ -154,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731638312846</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Version tag.">
+      <option name="closed" value="true" />
+      <created>1731638975610</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731638975610</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +187,7 @@
     <MESSAGE value="Get token." />
     <MESSAGE value="Download helm 3.16.3" />
     <MESSAGE value="Label and steps numbers." />
-    <option name="LAST_COMMIT_MESSAGE" value="Label and steps numbers." />
+    <MESSAGE value="Version tag." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version tag." />
   </component>
 </project>
