@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6dddbd27-8e01-4e4d-ad25-1242f8761e6c" name="Changes" comment="Fix paths for windows.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/src/helper/helm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/helper/helm.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/src/helper/kubernetes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/helper/kubernetes.ts" afterDir="false" />
     </list>
@@ -105,7 +107,8 @@
       <workItem from="1731579693595" duration="913000" />
       <workItem from="1731607636752" duration="869000" />
       <workItem from="1731631073043" duration="9485000" />
-      <workItem from="1731645957136" duration="1735000" />
+      <workItem from="1731645957136" duration="3363000" />
+      <workItem from="1731654277074" duration="1518000" />
     </task>
     <task id="LOCAL-00001" summary="Install, List, Uninstall, Port forward, Load KD.">
       <option name="closed" value="true" />
@@ -179,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731647488471</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fix paths for windows.">
+      <option name="closed" value="true" />
+      <created>1731647784435</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731647784435</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
