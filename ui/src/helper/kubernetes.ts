@@ -101,6 +101,6 @@ export const deprimeCluster = async (ddClient: v1.DockerDesktopClient) => {
         console.log(output.stderr);
         return 'Priming cluster failed';
     }
-    ddClient.desktopUI.toast.success('Deletd service account, CRB, and secret successfully.');
+    ddClient.desktopUI.toast.success('Deleted service account, CRB, and secret successfully.');
     return output?.stdout;
 };

@@ -20,10 +20,6 @@ export const installKubernetesDashboardChart = async (ddClient: v1.DockerDesktop
   const tgz = (os === 'win32' ?
       ".\\extensions\\sandipchitale_kubernetes-dashboard\\ui\\ui\\chart\\kubernetes-dashboard.tgz" :
       "./extensions/sandipchitale_kubernetes-dashboard/ui/ui/chart/kubernetes-dashboard.tgz");
-  if (os !== "win32") {
-    ddClient.desktopUI.toast.error('Kubernetes Dashboard Helm Chart is only supported on macOS');
-    return;
-  }
   ddClient.desktopUI.toast.success('Installing Kubernetes Dashboard Helm Chart');
   const output = await ddClient.extension.host?.cli.exec("helm", [
     "install",
