@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dddbd27-8e01-4e4d-ad25-1242f8761e6c" name="Changes" comment="Get token.">
+    <list default="true" id="6dddbd27-8e01-4e4d-ad25-1242f8761e6c" name="Changes" comment="Download helm 3.16.3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/metadata.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +104,7 @@
       <workItem from="1731576018380" duration="1630000" />
       <workItem from="1731579693595" duration="913000" />
       <workItem from="1731607636752" duration="869000" />
-      <workItem from="1731631073043" duration="3757000" />
+      <workItem from="1731631073043" duration="4745000" />
     </task>
     <task id="LOCAL-00001" summary="Install, List, Uninstall, Port forward, Load KD.">
       <option name="closed" value="true" />
@@ -129,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731577045286</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Download helm 3.16.3">
+      <option name="closed" value="true" />
+      <created>1731635162816</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731635162816</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +148,7 @@
     <MESSAGE value="Install, List, Uninstall, Port forward, Load KD." />
     <MESSAGE value="Toasts." />
     <MESSAGE value="Get token." />
-    <option name="LAST_COMMIT_MESSAGE" value="Get token." />
+    <MESSAGE value="Download helm 3.16.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Download helm 3.16.3" />
   </component>
 </project>

@@ -16,6 +16,9 @@
         "darwin": [
           {
             "path": "/darwin/kubectl"
+          },
+          {
+            "path": "/darwin/helm"
           }
         ],
         "windows": [
