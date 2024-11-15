@@ -1,5 +1,5 @@
 IMAGE?=sandipchitale/kubernetes-dashboard
-TAG?=latest
+TAG?=0.0.1
 
 BUILDER=buildx-multi-arch
 
