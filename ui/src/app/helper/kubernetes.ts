@@ -113,6 +113,7 @@ export const deprimeCluster = async (ddClient: v1.DockerDesktopClient) => {
         ddClient.desktopUI.toast.success('Depriming cluster for Kubernetes Dashboard. Deleting service account, Cluster Role Binding, and secret');
         const output = await ddClient.extension.host?.cli.exec("kubectl", [
             "delete",
+            " --ignore-not-found=true",
             "-f",
             kubectlDir,
         ])
