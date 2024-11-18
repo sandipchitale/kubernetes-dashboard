@@ -1,0 +1,16 @@
+<div class="mr-auto grid gap-y-2 content-start justify-items-start items-start content-start max-w-[99vw] h-screen">
+  <div class="flex p-2 gap-x-2 bg-gray-50 border rounded-md w-full">
+    <button class="py-2 px-4 border rounded-md" (click)="primeCluster()">Step 1: Prime Cluster</button>
+    <button class="py-2 px-4 border rounded-md" (click)="installKubernetesDashboardChart()">Step 2: Install Kubernetes Dashboard Chart</button>
+    <button class="ml-auto py-2 px-4 border rounded-md" (click)="portForward()">Step 3: Port Forward</button>
+    <button class="py-2 px-4 border rounded-md" (click)="getToken()">Step 4: Get Token</button>
+    <button class="py-2 px-4 border rounded-md bg-green-200" (click)="loadKubernetesDashboard()">Step 5: Load Kubernetes Dashboard</button>
+  </div>
+  <pre class="p-2 border rounded-md text-sm min-w-[99vw] max-w-[99vw] w-[99vw] overflow-x-scroll min-h-[20rem]" [innerText]="output"></pre>
+  <div class="flex p-2 px-2 gap-x-2 bg-gray-50 border rounded-md w-full">
+    <button class="py-2 px-4 border rounded-md" (click)="checkK8sConnection()">Check connection to cluster</button>
+    <button class="py-2 px-4 border rounded-md" (click)="listHelmReleases()">List Kubernetes Dashboard Release</button>
+    <button class="ml-auto py-2 px-4 border rounded-md bg-red-200" (click)="uninstallKubernetesDashboardChart()">Cleanup Step 1: Uninstall Kubernetes Dashboard Chart</button>
+    <button class="py-2 px-4 border rounded-md bg-red-200" (click)="deprimeCluster()">Cleanup Step 2: Deprime Cluster</button>
+  </div>
+</div>

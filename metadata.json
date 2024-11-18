@@ -1,0 +1,43 @@
+{
+  "icon": "kubernetes-dashboard.svg",
+  "vm": {
+    "composefile": "docker-compose.yaml"
+  },
+  "ui": {
+    "dashboard-tab": {
+      "title": "Kubernetes Dashboard",
+      "src": "index.html",
+      "root": "ui"
+    }
+  },
+  "host": {
+    "binaries": [
+      {
+        "darwin": [
+          {
+            "path": "/host/darwin/kubectl"
+          },
+          {
+            "path": "/host/darwin/helm"
+          }
+        ],
+        "windows": [
+          {
+            "path": "/host/windows/kubectl.exe"
+          },
+          {
+            "path": "/host/windows/helm.exe"
+          }
+        ],
+        "linux": [
+          {
+            "path": "/host/linux/kubectl"
+          },
+          {
+            "path": "/host/linux/helm"
+          }
+        ]
+      }
+    ]
+  }
+}
