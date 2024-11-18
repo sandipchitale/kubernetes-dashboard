@@ -26,8 +26,8 @@ export const checkK8sConnection = async (ddClient: v1.DockerDesktopClient) => {
 export const primeCluster = async (ddClient: v1.DockerDesktopClient) => {
     const os = ddClient.host.platform;
     const kubectlDir = (os === 'win32' ?
-        "..\\..\\Roaming\\Docker\\extensions\\sandipchitale_angular-docker-extension\\ui\\ui\\kubectl" :
-        "./extensions/sandipchitale_angular-docker-extension/ui/ui/kubectl");
+        "..\\..\\Roaming\\Docker\\extensions\\sandipchitale_kubernetes-dashboard\\ui\\ui\\kubectl" :
+        "./extensions/sandipchitale_kubernetes-dashboard/ui/ui/kubectl");
     try {
         ddClient.desktopUI.toast.success('Priming cluster for Kubernetes Dashboard. Creating namespace, service account, Cluster Role Binding, and secret');
         const output = await ddClient.extension.host?.cli.exec("kubectl", [
@@ -107,8 +107,8 @@ export const portForward = async (ddClient: v1.DockerDesktopClient) => {
 export const deprimeCluster = async (ddClient: v1.DockerDesktopClient) => {
     const os = ddClient.host.platform;
     const kubectlDir = (os === 'win32' ?
-        "..\\..\\Roaming\\Docker\\extensions\\sandipchitale_angular-docker-extension\\ui\\ui\\kubectl" :
-        "./extensions/sandipchitale_angular-docker-extension/ui/ui/kubectl");
+        "..\\..\\Roaming\\Docker\\extensions\\sandipchitale_kubernetes-dashboard\\ui\\ui\\kubectl" :
+        "./extensions/sandipchitale_kubernetes-dashboard/ui/ui/kubectl");
     try {
         ddClient.desktopUI.toast.success('Depriming cluster for Kubernetes Dashboard. Deleting service account, Cluster Role Binding, and secret');
         const output = await ddClient.extension.host?.cli.exec("kubectl", [

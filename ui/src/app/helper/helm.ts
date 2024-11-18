@@ -24,8 +24,8 @@ export const listHelmReleases = async (ddClient: v1.DockerDesktopClient) => {
 export const installKubernetesDashboardChart = async (ddClient: v1.DockerDesktopClient) => {
     const os = ddClient.host.platform;
     const tgz = (os === 'win32' ?
-        "..\\..\\Roaming\\Docker\\extensions\\sandipchitale_angular-docker-extension\\ui\\ui\\chart\\kubernetes-dashboard.tgz" :
-        "./extensions/sandipchitale_angular-docker-extension/ui/ui/chart/kubernetes-dashboard.tgz");
+        "..\\..\\Roaming\\Docker\\extensions\\sandipchitale_kubernetes-dashboard\\ui\\ui\\chart\\kubernetes-dashboard.tgz" :
+        "./extensions/sandipchitale_kubernetes-dashboard/ui/ui/chart/kubernetes-dashboard.tgz");
     try {
         ddClient.desktopUI.toast.success('Installing Kubernetes Dashboard Helm chart.');
         const output = await ddClient.extension.host?.cli.exec("helm", [
