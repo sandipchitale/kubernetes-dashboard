@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
+import {DOCUMENT} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {RouterOutlet} from '@angular/router';
 import {createDockerDesktopClient} from "@docker/extension-api-client";
@@ -27,6 +28,8 @@ import {
 export class AppComponent {
   private _output: string | undefined;
   private ddClient = createDockerDesktopClient();
+  private readonly document = inject(DOCUMENT);
+  private readonly window = this.document?.defaultView
 
   constructor() {
     this._output = "";
@@ -54,11 +57,11 @@ export class AppComponent {
 
   async getToken() {
     this.output = await getToken(this.ddClient);
-    navigator.clipboard.writeText(this.output);
+    this.window?.navigator?.clipboard?.writeText(this.output);
   }
 
   loadKubernetesDashboard() {
-    window.location.href = "http://localhost:3000";
+    this.document.location.href = "http://localhost:3000/#/workloads?namespace=_all";
   }
 
   async uninstallKubernetesDashboardChart() {
