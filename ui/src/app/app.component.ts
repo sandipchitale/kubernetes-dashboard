@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {AfterViewInit, Component, inject} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {RouterOutlet} from '@angular/router';
@@ -25,7 +25,7 @@ import {
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit{
   private _output: string | undefined;
   private ddClient = createDockerDesktopClient();
   private readonly document = inject(DOCUMENT);
@@ -35,12 +35,15 @@ export class AppComponent {
     this._output = "";
   }
 
-  async checkK8sConnection() {
-    this.output = await checkK8sConnection(this.ddClient);
+  ngAfterViewInit(): void {
+    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+      this.document.querySelector('html')?.classList.remove('dark')
+    } else {
+      this.document.querySelector('html')?.classList.add('dark')
+    }
   }
 
-  async listHelmReleases() {
-    this.output = await listHelmReleases(this.ddClient);
+  async allSteps() {
   }
 
   async primeCluster() {
@@ -64,12 +67,23 @@ export class AppComponent {
     this.document.location.href = "http://localhost:3000/#/workloads?namespace=_all";
   }
 
-  async uninstallKubernetesDashboardChart() {
+  async allCleanSteps() {
+  }
+
+  async uninstallKubernetesDashboard() {
     this.output = await uninstallKubernetesDashboardChart(this.ddClient);
   }
 
   async deprimeCluster() {
     this.output = await deprimeCluster(this.ddClient);
+  }
+
+  async checkConnectionToCluster() {
+    this.output = await checkK8sConnection(this.ddClient);
+  }
+
+  async listHelmReleases() {
+    this.output = await listHelmReleases(this.ddClient);
   }
 
   set output(commandOutput: string | undefined) {
