@@ -4,6 +4,10 @@ import {FormsModule} from '@angular/forms';
 import {RouterOutlet} from '@angular/router';
 import {createDockerDesktopClient} from "@docker/extension-api-client";
 
+import {ButtonModule} from 'primeng/button';
+import {TableModule} from 'primeng/table';
+import {ToolbarModule} from 'primeng/toolbar';
+
 import {
   checkK8sConnection,
   primeCluster,
@@ -21,7 +25,7 @@ import {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule],
+  imports: [RouterOutlet, FormsModule, ButtonModule, TableModule, ToolbarModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

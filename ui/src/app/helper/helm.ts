@@ -27,7 +27,7 @@ export const installKubernetesDashboardChart = async (ddClient: v1.DockerDesktop
         "..\\..\\Roaming\\Docker\\extensions\\sandipchitale_kubernetes-dashboard\\ui\\ui\\chart\\kubernetes-dashboard.tgz" :
         "./extensions/sandipchitale_kubernetes-dashboard/ui/ui/chart/kubernetes-dashboard.tgz");
     try {
-        ddClient.desktopUI.toast.success('Installing Kubernetes Dashboard Helm chart.');
+        // ddClient.desktopUI.toast.success('Installing Kubernetes Dashboard Helm chart.');
         const output = await ddClient.extension.host?.cli.exec("helm", [
             "install",
             "-n",
@@ -41,7 +41,7 @@ export const installKubernetesDashboardChart = async (ddClient: v1.DockerDesktop
             console.log(output.stderr);
             return output.stderr;
         }
-        ddClient.desktopUI.toast.success('Kubernetes Dashboard Helm Chart installed');
+        // ddClient.desktopUI.toast.success('Kubernetes Dashboard Helm Chart installed');
         return output?.stdout;
     } catch (e: any) {
         ddClient.desktopUI.toast.error(`Installation of Kubernetes Dashboard Helm chart failed. ${e}`);
@@ -52,7 +52,7 @@ export const installKubernetesDashboardChart = async (ddClient: v1.DockerDesktop
 
 export const uninstallKubernetesDashboardChart = async (ddClient: v1.DockerDesktopClient) => {
     try {
-        ddClient.desktopUI.toast.success('Uninstalling Kubernetes Dashboard');
+        // ddClient.desktopUI.toast.success('Uninstalling Kubernetes Dashboard');
         const output = await ddClient.extension.host?.cli.exec("helm", [
             "uninstall",
             "-n",
@@ -65,7 +65,7 @@ export const uninstallKubernetesDashboardChart = async (ddClient: v1.DockerDeskt
             console.log(output.stderr);
             return output.stderr;
         }
-        ddClient.desktopUI.toast.success('Kubernetes Dashboard uninstalled.');
+        // ddClient.desktopUI.toast.success('Kubernetes Dashboard uninstalled.');
         return output?.stdout;
 
     } catch (e: any) {

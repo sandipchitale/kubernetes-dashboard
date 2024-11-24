@@ -2,7 +2,7 @@ import {v1} from "@docker/extension-api-client-types";
 
 export const checkK8sConnection = async (ddClient: v1.DockerDesktopClient) => {
     try {
-        ddClient.desktopUI.toast.success('Connecting to Kubernetes');
+        // ddClient.desktopUI.toast.success('Connecting to Kubernetes');
         const output = await ddClient.extension.host?.cli.exec("kubectl", [
             "cluster-info",
             "--request-timeout",
@@ -14,7 +14,7 @@ export const checkK8sConnection = async (ddClient: v1.DockerDesktopClient) => {
             console.log(output.stderr);
             return 'Connection failed';
         }
-        ddClient.desktopUI.toast.success('Connection successful');
+        // ddClient.desktopUI.toast.success('Connection successful');
         return 'Connection successful';
     } catch (e: any) {
         ddClient.desktopUI.toast.error(`Connection failed. ${e}`);
@@ -29,7 +29,7 @@ export const primeCluster = async (ddClient: v1.DockerDesktopClient) => {
         "..\\..\\Roaming\\Docker\\extensions\\sandipchitale_kubernetes-dashboard\\ui\\ui\\kubectl" :
         "./extensions/sandipchitale_kubernetes-dashboard/ui/ui/kubectl");
     try {
-        ddClient.desktopUI.toast.success('Priming cluster for Kubernetes Dashboard. Creating namespace, service account, Cluster Role Binding, and secret');
+        // ddClient.desktopUI.toast.success('Priming cluster for Kubernetes Dashboard. Creating namespace, service account, Cluster Role Binding, and secret');
         const output = await ddClient.extension.host?.cli.exec("kubectl", [
             "apply",
             "-f",
@@ -41,7 +41,7 @@ export const primeCluster = async (ddClient: v1.DockerDesktopClient) => {
             console.log(output.stderr);
             return 'Priming cluster failed';
         }
-        ddClient.desktopUI.toast.success('Created namespace, service account, Cluster Role Binding, and secret successfully.');
+        // ddClient.desktopUI.toast.success('Created namespace, service account, Cluster Role Binding, and secret successfully.');
         return output?.stdout;
     } catch (e) {
         ddClient.desktopUI.toast.error(`Priming cluster failed. ${e}`);
@@ -52,7 +52,7 @@ export const primeCluster = async (ddClient: v1.DockerDesktopClient) => {
 
 export const getToken = async (ddClient: v1.DockerDesktopClient) => {
     try {
-        ddClient.desktopUI.toast.success('Getting token');
+        // ddClient.desktopUI.toast.success('Getting token');
         const output = await ddClient.extension.host?.cli.exec("kubectl", [
             "get",
             "secret",
@@ -80,7 +80,7 @@ export const getToken = async (ddClient: v1.DockerDesktopClient) => {
 
 export const portForward = async (ddClient: v1.DockerDesktopClient) => {
     try {
-        ddClient.desktopUI.toast.success('Forwarding Port');
+        // ddClient.desktopUI.toast.success('Forwarding Port');
         ddClient.extension.host?.cli.exec("kubectl", [
             "port-forward",
             "-n",
@@ -93,7 +93,7 @@ export const portForward = async (ddClient: v1.DockerDesktopClient) => {
                 ddClient.desktopUI.toast.error(`Forwarding Port failed. ${output.stderr}`);
                 return output.stderr;
             }
-            ddClient.desktopUI.toast.success('Port Forwarded');
+            // ddClient.desktopUI.toast.success('Port Forwarded');
             return output?.stdout;
         });
         return 'Port Forwarded';
@@ -110,7 +110,7 @@ export const deprimeCluster = async (ddClient: v1.DockerDesktopClient) => {
         "..\\..\\Roaming\\Docker\\extensions\\sandipchitale_kubernetes-dashboard\\ui\\ui\\kubectl" :
         "./extensions/sandipchitale_kubernetes-dashboard/ui/ui/kubectl");
     try {
-        ddClient.desktopUI.toast.success('Depriming cluster for Kubernetes Dashboard. Deleting service account, Cluster Role Binding, and secret');
+        // ddClient.desktopUI.toast.success('Depriming cluster for Kubernetes Dashboard. Deleting service account, Cluster Role Binding, and secret');
         const output = await ddClient.extension.host?.cli.exec("kubectl", [
             "delete",
             " --ignore-not-found=true",
@@ -123,7 +123,7 @@ export const deprimeCluster = async (ddClient: v1.DockerDesktopClient) => {
             console.log(output.stderr);
             return 'Depriming cluster failed';
         }
-        ddClient.desktopUI.toast.success('Deleted service account, Cluster Role Binding, and secret successfully.');
+        // ddClient.desktopUI.toast.success('Deleted service account, Cluster Role Binding, and secret successfully.');
         return output?.stdout;
     } catch (e) {
         ddClient.desktopUI.toast.error(`Depriming cluster failed. ${e}`);

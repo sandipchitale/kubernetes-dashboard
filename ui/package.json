@@ -11,6 +11,7 @@
   "private": true,
   "dependencies": {
     "@docker/extension-api-client": "0.3.0",
+    "@angular/cdk": "^18.2.12",
     "@angular/animations": "^18.2.0",
     "@angular/common": "^18.2.0",
     "@angular/compiler": "^18.2.0",
@@ -19,7 +20,11 @@
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
+    "@primeng/themes": "^18.0.0-rc.1",
+    "primeicons": "^7.0.0",
+    "primeng": "^18.0.0-rc.1",
     "rxjs": "~7.8.0",
+    "tailwindcss-primeui": "^0.3.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
   },

@@ -1,18 +1,34 @@
-<div class="mr-auto grid gap-y-2 content-start justify-items-start items-start content-start max-w-[99vw] h-screen">
-  <div class="flex p-2 gap-x-2 bg-gray-50 border rounded-md w-full">
-    <button class="py-2 px-4 border rounded-md  bg-green-400" (click)="allSteps()">Steps 1-5: All</button>
-    <button class="ml-auto py-2 px-4 border rounded-md" (click)="installKubernetesDashboardChart()">Step 1: Install Kubernetes Dashboard Chart</button>
-    <button class="py-2 px-4 border rounded-md" (click)="portForward()">Step 2: Port Forward</button>
-    <button class="py-2 px-4 border rounded-md" (click)="primeCluster()">Step 3: Prime Cluster</button>
-    <button class="py-2 px-4 border rounded-md" (click)="getToken()">Step 4: Get Token</button>
-    <button class="py-2 px-4 border rounded-md bg-green-200" (click)="loadKubernetesDashboard()">Step 5: Load Kubernetes Dashboard</button>
+<div class="w-screen h-screen p-4 grid gap-y-4 content-start">
+  <p-toolbar class="self-start">
+    <ng-template #start>
+      <button disabled pButton class="mr-2" severity="success" (click)="allSteps()">Steps 1-5: All</button>
+    </ng-template>
+    <ng-template #center>
+
+    </ng-template>
+    <ng-template #end>
+      <button pButton class="mr-2" severity="success" (click)="installKubernetesDashboardChart()">Step 1: Install Kubernetes Dashboard Chart</button>
+      <button pButton class="mr-2" severity="success" (click)="portForward()">Step 2: Port Forward</button>
+      <button pButton class="mr-2" severity="success" (click)="primeCluster()">Step 3: Prime Cluster</button>
+      <button pButton class="mr-2" severity="success" (click)="getToken()">Step 4: Get Token</button>
+      <button pButton class="mr-2" severity="success" (click)="loadKubernetesDashboard()">Step 5: Load Kubernetes Dashboard</button>
+    </ng-template>
+  </p-toolbar>
+  <div class="justify-self-stretch self-stretch border h-[80vh] overflow-scroll">
+    <pre class="w-full h-full p-2 text-sm" [innerText]="output"></pre>
   </div>
-  <pre class="p-2 border rounded-md text-sm min-w-[99vw] max-w-[99vw] w-[99vw] overflow-x-scroll min-h-[20rem]" [innerText]="output"></pre>
-  <div class="flex p-2 px-2 gap-x-2 bg-gray-50 border rounded-md w-full">
-    <button class="py-2 px-4 border rounded-md bg-red-400" (click)="allCleanSteps()">Cleanup Steps 1-2: Clean up</button>
-    <button class="ml-auto py-2 px-4 border rounded-md bg-red-200" (click)="uninstallKubernetesDashboard()">Cleanup Step 1: Uninstall Kubernetes Dashboard</button>
-    <button class="py-2 px-4 border rounded-md bg-red-200" (click)="deprimeCluster()">Cleanup Step 2: Deprime Cluster</button>
-    <button class="py-2 px-4 border rounded-md" (click)="listHelmReleases()">List Kubernetes Dashboard Release</button>
-    <button class="py-2 px-4 border rounded-md" (click)="checkConnectionToCluster()">Check connection to cluster</button>
-  </div>
+  <p-toolbar class="self-start">
+    <ng-template #start>
+      <button disabled pButton class="mr-2" severity="danger" (click)="allCleanSteps()">Cleanup Steps 1-2: Clean up</button>
+    </ng-template>
+    <ng-template #center>
+    </ng-template>
+    <ng-template #end>
+      <button pButton class="mr-2" severity="danger" (click)="uninstallKubernetesDashboard()">Cleanup Step 1: Uninstall Kubernetes Dashboard</button>
+      <button pButton class="mr-2" severity="danger" (click)="deprimeCluster()">Cleanup Step 2: Deprime Cluster</button>
+      <button pButton class="mr-2" severity="secondary" (click)="listHelmReleases()">List Kubernetes Dashboard Release</button>
+      <button pButton class="mr-2" severity="secondary" (click)="checkConnectionToCluster()">Check connection to cluster</button>
+    </ng-template>
+  </p-toolbar>
 </div>
+
