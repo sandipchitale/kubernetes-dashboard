@@ -15,7 +15,7 @@ export const checkK8sConnection = async (ddClient: v1.DockerDesktopClient) => {
             return 'Connection failed';
         }
         // ddClient.desktopUI.toast.success('Connection successful');
-        return 'Connection successful';
+        return 'Connection successful.';
     } catch (e: any) {
         ddClient.desktopUI.toast.error(`Connection failed. ${e}`);
         console.log("Connection failed.", e);
