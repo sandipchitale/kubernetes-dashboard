@@ -1,4 +1,4 @@
-# Angular Docker Extension
+# Kubernetes Dashboard Docker Desktop Extension
 
 # How to install
 
