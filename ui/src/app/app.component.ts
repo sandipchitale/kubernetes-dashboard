@@ -47,6 +47,11 @@ export class AppComponent implements AfterViewInit{
     }
   }
 
+  goTo() {
+    this.ddClient.host.openExternal('https://www.linkedin.com/pulse/docker-desktop-extension-kubernetes-dashboard-sandip-chitale-85obc/');
+  }
+
+
   async allSteps() {
   }
 
