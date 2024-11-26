@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-tailwindcss": {
+    "kubernetes-dashboard": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-tailwindcss",
+            "outputPath": "dist/kubernetes-dashboard",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "baseHref": "./",
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-tailwindcss:build:production"
+              "buildTarget": "kubernetes-dashboard:build:production"
             },
             "development": {
-              "buildTarget": "angular-tailwindcss:build:development"
+              "buildTarget": "kubernetes-dashboard:build:development"
             }
           },
           "defaultConfiguration": "development"

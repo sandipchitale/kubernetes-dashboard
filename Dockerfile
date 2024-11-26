@@ -69,7 +69,7 @@ RUN rm -rf helm-v3.16.3-windows-amd64.zip ./windows-amd64
 COPY docker-compose.yaml .
 COPY metadata.json .
 COPY kubernetes-dashboard.svg .
-COPY --from=client-builder /ui/dist/angular-tailwindcss/browser ui
+COPY --from=client-builder /ui/dist/kubernetes-dashboard/browser ui
 
 COPY --from=builder /backend /backend
 EXPOSE 3000

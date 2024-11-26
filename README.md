@@ -4,13 +4,11 @@
 
 ## Without debug mode
 
-- make && docker extension install sandipchitale/kubernetes-dashboard:1.0.0 -f
-- make && docker extension update sandipchitale/kubernetes-dashboard:1.0.0 -f
+- make && docker extension $(docker extension ls | grep --silent kubernetes-dashboard ; if [  $? -eq 0 ] ; then echo 'update' ; else echo 'install' ; fi)  sandipchitale/kubernetes-dashboard:1.0.0 -f
 
 ## With debug mode
 
-- make && docker extension install sandipchitale/kubernetes-dashboard:1.0.0 -f && docker extension dev debug sandipchitale/kubernetes-dashboard
-- make && docker extension update sandipchitale/kubernetes-dashboard:1.0.0 -f && docker extension dev debug sandipchitale/kubernetes-dashboard
+- make && docker extension $(docker extension ls | grep --silent kubernetes-dashboard ; if [  $? -eq 0 ] ; then echo 'update' ; else echo 'install' ; fi) sandipchitale/kubernetes-dashboard:1.0.0 -f && docker extension dev debug sandipchitale/kubernetes-dashboard
 
 This repository defines an example of a Docker extension. The files in this repository have been automatically generated as a result of running `docker extension init`.
 
