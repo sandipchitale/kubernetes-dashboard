@@ -1,29 +1,29 @@
 <div class="w-screen h-screen p-4 grid grid-rows-[auto_auto_1fr] gap-y-4 content-start">
   <p-toolbar>
     <ng-template #start>
-      <button pButton class="mr-2 w-[330px]" severity="success" (click)="installKubernetesDashboardChart()">Step 1: Install Kubernetes Dashboard Chart</button>
-      <button pButton class="mr-2 w-[230px]" severity="success" (click)="primeCluster()">Step 2: Prime Cluster</button>
-      <button pButton class="mr-2" severity="success" (click)="portForward()">Step 3: Port Forward</button>
-      <button pButton class="mr-2" severity="success" (click)="getToken()">Step 4: Get Token</button>
-      <button pButton class="mr-2" severity="success" (click)="loadKubernetesDashboard()">Step 5: Load Kubernetes Dashboard</button>
+      <button pButton size="small" class="mr-2 w-[290px]" severity="success" (click)="installKubernetesDashboardChart()">Step 1: Install Kubernetes Dashboard Chart</button>
+      <button pButton size="small" class="mr-2 w-[200px]" severity="success" (click)="primeCluster()">Step 2: Prime Cluster</button>
+      <button pButton size="small" class="mr-2" severity="success" (click)="portForward()">Step 3: Port Forward</button>
+      <button pButton size="small" class="mr-2" severity="success" (click)="getToken()">Step 4: Get Token</button>
+      <button pButton size="small" class="mr-2" severity="success" (click)="loadKubernetesDashboard()">Step 5: Load Kubernetes Dashboard</button>
     </ng-template>
     <ng-template #center>
     </ng-template>
     <ng-template #end>
-      <button disabled pButton class="mr-2 w-[200px]" severity="success" (click)="allSteps()">Steps 1-5: All</button>
+      <button disabled pButton size="small" class="mr-2 w-[200px]" severity="success" (click)="allSteps()">Steps 1-5: All</button>
     </ng-template>
   </p-toolbar>
   <p-toolbar>
     <ng-template #start>
-      <button pButton class="mr-2  w-[330px]" severity="danger" (click)="uninstallKubernetesDashboard()">Cleanup Step 1: Uninstall Kubernetes Dashboard</button>
-      <button pButton class="mr-2  w-[230px]" severity="danger" (click)="deprimeCluster()">Cleanup Step 2: Deprime Cluster</button>
+      <button pButton size="small" class="mr-2 w-[290px]" severity="danger" (click)="uninstallKubernetesDashboard()">Cleanup Step 1: Uninstall Kubernetes Dashboard</button>
+      <button pButton size="small" class="mr-2  w-[200px]" severity="danger" (click)="deprimeCluster()">Cleanup Step 2: Deprime Cluster</button>
     </ng-template>
     <ng-template #center>
-      <button pButton class="mr-2" severity="secondary" (click)="listHelmReleases()">List Kubernetes Dashboard Release</button>
-      <button pButton class="mr-2" severity="secondary" (click)="checkConnectionToCluster()">Check connection to cluster</button>
+      <button pButton size="small" class="mr-2" severity="secondary" (click)="listHelmReleases()">List Kubernetes Dashboard Release</button>
+      <button pButton size="small" class="mr-2" severity="secondary" (click)="checkConnectionToCluster()">Check connection to cluster</button>
     </ng-template>
     <ng-template #end>
-      <button disabled pButton class="mr-2 w-[200px]" severity="danger" (click)="allCleanSteps()">Cleanup Steps 1-2: Clean up</button>
+      <button disabled pButton size="small" class="mr-2 w-[200px]" severity="danger" (click)="allCleanSteps()">Cleanup Steps 1-2: Clean up</button>
     </ng-template>
   </p-toolbar>
   <div class="border overflow-scroll">
