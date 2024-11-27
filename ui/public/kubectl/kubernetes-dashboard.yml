@@ -1,3 +1,8 @@
+# Ensure that the kubernetes-dashboard namespace exists
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kubernetes-dashboard
 # Service accounts to work with kubernetes-dashboard
 ---
 apiVersion: v1

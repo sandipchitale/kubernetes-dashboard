@@ -32,6 +32,7 @@ export const installKubernetesDashboardChart = async (ddClient: v1.DockerDesktop
             "install",
             "-n",
             "kubernetes-dashboard",
+            "--create-namespace",
             "kubernetes-dashboard",
             tgz,
         ]);
