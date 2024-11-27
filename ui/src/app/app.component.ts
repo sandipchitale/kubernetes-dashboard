@@ -41,9 +41,9 @@ export class AppComponent implements AfterViewInit{
 
   ngAfterViewInit(): void {
     if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-      this.document.querySelector('html')?.classList.remove('dark')
+      this.document.querySelector('html')?.classList.remove('dark-theme')
     } else {
-      this.document.querySelector('html')?.classList.add('dark')
+      this.document.querySelector('html')?.classList.add('dark-theme')
     }
   }
 

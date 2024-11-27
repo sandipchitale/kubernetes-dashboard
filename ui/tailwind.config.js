@@ -5,7 +5,9 @@ module.exports = {
     "./node_modules/primeng/**/*.{html,ts}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      darkMode: ['selector', '[data-mode="dark-theme"]'],
+    },
   },
   plugins: [],
   darkMode: 'selector',
