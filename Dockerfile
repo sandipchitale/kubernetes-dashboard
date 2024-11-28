@@ -19,8 +19,8 @@ COPY ui /ui
 RUN npm run build
 
 FROM --platform=$BUILDPLATFORM node:22.11.0-alpine3.20
-LABEL org.opencontainers.image.title="Angular Docker Extension" \
-    org.opencontainers.image.description="Angular based docker extension" \
+LABEL org.opencontainers.image.title="Kubernetes Dashboard" \
+    org.opencontainers.image.description="Integration with Kubernetes Dashboard" \
     org.opencontainers.image.vendor="Sandip Chitale" \
     com.docker.desktop.extension.api.version="0.3.4" \
     com.docker.extension.screenshots="" \
