@@ -13,7 +13,7 @@
     <ng-template #center>
     </ng-template>
     <ng-template #end>
-      <button disabled pButton size="small" class="mr-2 w-[200px]" severity="success" (click)="allSteps()">Steps 1-5: All</button>
+<!--      <button disabled pButton size="small" class="mr-2 w-[200px]" severity="success" (click)="allSteps()">Steps 1-5: All</button>-->
     </ng-template>
   </p-toolbar>
   <p-toolbar>
@@ -22,11 +22,11 @@
       <button pButton size="small" class="mr-2  w-[200px]" severity="danger" (click)="deprimeCluster()">Cleanup Step 2: Deprime Cluster</button>
     </ng-template>
     <ng-template #center>
-      <button pButton size="small" class="mr-2" severity="secondary" (click)="listHelmReleases()">List Kubernetes Dashboard Release</button>
-      <button pButton size="small" class="mr-2" severity="secondary" (click)="checkConnectionToCluster()">Check connection to cluster</button>
     </ng-template>
     <ng-template #end>
-      <button disabled pButton size="small" class="mr-2 w-[200px]" severity="danger" (click)="allCleanSteps()">Cleanup Steps 1-2: Clean up</button>
+      <button pButton size="small" class="mr-2" severity="secondary" (click)="listHelmReleases()">List Kubernetes Dashboard Release</button>
+      <button pButton size="small" class="mr-2" severity="secondary" (click)="checkConnectionToCluster()">Check connection to cluster</button>
+<!--      <button disabled pButton size="small" class="mr-2 w-[200px]" severity="danger" (click)="allCleanSteps()">Cleanup Steps 1-2: Clean up</button>-->
     </ng-template>
   </p-toolbar>
   <div class="border overflow-scroll">
